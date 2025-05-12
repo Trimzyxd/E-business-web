@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recycled Boxes</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <header>
+    <h1>GreenWrap</h1>
+    <p>Eco-friendly Packaging Solutions</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="product-page">
+    <div class="product-view">
+        <div class="product-image-slider">
+            <button class="arrow left" onclick="prevImage()">&#10094;</button>
+            <img id="mainImage" src="Images/Recycled box 1.png" alt="Recycled Boxes">
+            <button class="arrow right" onclick="nextImage()">&#10095;</button>
+          
+            <div class="thumbnail-row">
+              <img src="Images/Recycled box 1.png" onclick="setImage(0)">
+              <img src="Images/Recycled box 2.png" onclick="setImage(1)">
+              <img src="Images/Recycled box 3.png" onclick="setImage(2)">
+            </div>
+          </div>
+      <div class="product-details">
+        <h2>Recycled Boxes</h2>
+        <p class="price">₱20 / box</p>
+        <p>Our recycled boxes are made from 100% post-consumer materials. They're sturdy, reusable, and designed for eco-conscious shipping.</p>
+        <button class="buy-button">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GreenWrap</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+<script>
+    const images = [
+      "Images/Recycled box 1.png",
+      "Images/Recycled box 2.png",   
+      "Images/Recycled box 3.png"
+    ];
+    let currentIndex = 0;
+  
+    function setImage(index) {
+      currentIndex = index;
+      document.getElementById("mainImage").src = images[currentIndex];
+    }
+  
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      setImage(currentIndex);
+    }
+  
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      setImage(currentIndex);
+    }
+  </script>
+  
+</body>
+</html>
