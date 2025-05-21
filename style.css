@@ -5,7 +5,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom right, #b8e9bc, #ffffff);
   color: #333;
   min-height: 100vh;
   background-attachment: fixed;
